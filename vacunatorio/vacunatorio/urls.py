@@ -26,5 +26,7 @@ urlpatterns = [
     path('ingresar/', v.ingresar),
     path('ingreso_registro/', v.ingreso),
     path('listar/', v.listar),
-    path('eliminar/', v.eliminar)
+    path('eliminar/', v.eliminar),
+    path('buscar/', v.buscar),
+    path('busqueda/', v.busqueda)
 ]

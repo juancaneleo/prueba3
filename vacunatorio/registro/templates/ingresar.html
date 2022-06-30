@@ -6,44 +6,43 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
     {% load static %}
+    <link rel="stylesheet" href="{% static 'css/bootstrap.min.css' %}">
 </head>
 <body>
     {% include "nav.html" %}
-    <form action="/ingreso_registro/" method="GET">
-        <table>
-            <tr>
-                <td>Rut</td>
-                <td><input type="text" name="txt_rut"></td>
-            </tr>
-            <tr>
-                <td>Nombre</td>
-                <td><input type="text" name="txt_nombre"></td>
-            </tr>
-            <tr>
-                <td>Apellido paterno</td>
-                <td><input type="text" name="txt_appaterno"></td>
-            </tr>
-            <tr>
-                <td>Apellido materno</td>
-                <td><input type="text" name="txt_apmaterno"></td>
-            </tr>
-            <tr>
-                <td>edad</td>
-                <td><input type="text" name="txt_edad"></td>
-            </tr>
-            <tr>
-                <td>nombre vacuna</td>
-                <td><input type="text" name="txt_vacuna"></td>
-            </tr>
-            <tr>
-                <td>fecha</td>
-                <td><input type="text" name="txt_fecha"></td>
-            </tr>
-            <tr>
-                <td><input type="submit" value="Guardar" name=""></td>
-                <td></td>
-            </tr>
-        </table>      
-    </form>   
+    <div class="container">
+
+    <form  action="/ingreso_registro/" method="GET">
+        <div class="form-group">
+          <label for="exampleInputEmail1">rut</label>
+          <input type="text" name="txt_rut"  class="form-control" >
+        </div>
+        <div class="form-group">
+          <label for="exampleInputPassword1">nombre</label>
+          <input type="text"  name="txt_nombre" class="form-control">
+        </div>
+        <div class="form-group">
+            <label for="exampleInputPassword1">Apellido paterno</label>
+            <input type="text"  name="txt_appaterno" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">Apellido materno</label>
+            <input type="text"  name="txt_apmaterno" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">edad</label>
+            <input type="text"  name="txt_edad" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">noombre vacuna</label>
+            <input type="text"  name="txt_vacuna" class="form-control">
+          </div>
+          <div class="form-group">
+            <label for="exampleInputPassword1">fecha</label>
+            <input type="text"  name="txt_fecha" class="form-control mb-3" placeholder="xx/xx/xxxx">
+          </div>
+        <button type="submit" class="btn btn-primary">Submit</button>
+      </form>
+    </div> 
 </body>
 </html>

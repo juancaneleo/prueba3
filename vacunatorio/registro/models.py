@@ -2,7 +2,7 @@ from django.db import models
 
 # Create your models here.
 class Persona(models.Model):
-    rut=models.CharField(max_length=30)
+    rut=models.CharField(max_length=30,primary_key=True)
     nombre=models.CharField(max_length=30)
     appaterno=models.CharField(max_length=30)
     apmaterno=models.CharField(max_length=30)

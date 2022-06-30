@@ -36,3 +36,16 @@ def eliminar(request):
     else:
             mensaje = "el id recibido es " + id_recibido
     return HttpResponse(mensaje)
+
+def buscar(request):
+    return render(request, 'buscar.html')
+
+def busqueda(request):
+    datos = Persona.objects.all()
+    query = request.GET["txt_busqueda"]
+    busqueda = datos.filter(rut=query)
+    if busqueda:
+        persona = datos.get(rut=query)
+        return render(request, "busqueda.html",  {"persona":persona} )
+    else:
+        return render(request, "busqueda.html" )
