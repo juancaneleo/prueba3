@@ -12,7 +12,7 @@
     {% include "nav.html" %}
     <div class="container">
 
-    <form  action="/ingreso_registro/" method="GET">
+    <form  action="/ingreso_registro/" id="form" method="GET">
         <div class="form-group">
           <label for="exampleInputEmail1">rut</label>
           <input type="text" name="txt_rut"  class="form-control" >
@@ -44,5 +44,6 @@
         <button type="submit" class="btn btn-primary">Submit</button>
       </form>
     </div> 
+    <script src="{% static 'js/validation.js' %}"></script>
 </body>
 </html>

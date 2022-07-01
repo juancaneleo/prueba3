@@ -9,3 +9,6 @@ class Persona(models.Model):
     edad=models.CharField(max_length=10)
     nomvacuna=models.CharField(max_length=30)
     fecha=models.CharField(max_length=30)
+
+    def __str__(self):
+        return self.nombre + " " + self.appaterno + " (" + self.rut + ")"
